@@ -714,6 +714,8 @@ h1, h2, h3, h4, h5, h6 {
     opacity: 0;
     transform: translateY(30px);
     animation: slideUp 0.8s forwards;
+    position: relative;
+    z-index: 2;
 }
 
 @keyframes slideUp {
@@ -728,6 +730,8 @@ h1, h2, h3, h4, h5, h6 {
     transform: translateY(30px);
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
     will-change: opacity, transform;
+    position: relative;
+    z-index: 1;
 }
 
 .fade-in-section.animate-in {
@@ -873,12 +877,17 @@ h1, h2, h3, h4, h5, h6 {
         rgba(0, 0, 0, 0.5) 50%,
         rgba(0, 0, 0, 0.4) 100%);
     z-index: -1;
+    pointer-events: none;
 }
 
 .hero-content {
     text-align: left;
     margin-top: 4rem;
     margin-right: auto;
+    position: relative;
+    z-index: 10;
+    background: transparent;
+    isolation: isolate;
 }
 
 .hero-subtitle {
@@ -892,6 +901,9 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 1rem;
     position: relative;
     padding-left: 40px;
+    -webkit-text-fill-color: hsl(var(--color-secondary));
+    background: transparent;
+    z-index: 10;
 }
 
 .hero-subtitle::before {
@@ -909,15 +921,21 @@ h1, h2, h3, h4, h5, h6 {
     font-size: clamp(2.5rem, 5vw, 4.5rem);
     font-weight: 800;
     margin-bottom: 1.5rem;
-    color: hsl(var(--color-white));
-    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    color: #FFFFFF;
+    text-shadow: none;
+    -webkit-text-fill-color: #FFFFFF;
+    -webkit-text-stroke: 0;
+    position: relative;
+    z-index: 10;
+    background: transparent;
 }
 
 .hero-title .highlight {
     color: hsl(var(--color-secondary));
-    background: linear-gradient(45deg, hsl(var(--color-secondary)), white);
-    -webkit-background-clip: text;
-    background-clip: text;
+    -webkit-text-fill-color: hsl(var(--color-secondary));
+    background: transparent;
+    background-clip: unset;
+    -webkit-background-clip: unset;
 }
 
 .hero-text {
@@ -925,7 +943,12 @@ h1, h2, h3, h4, h5, h6 {
     max-width: 600px;
     margin-bottom: 2.5rem;
     opacity: 0.9;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    text-shadow: none;
+    color: #FFFFFF;
+    -webkit-text-fill-color: #FFFFFF;
+    background: transparent;
+    position: relative;
+    z-index: 10;
 }
 
 .hero-buttons {
@@ -1606,6 +1629,47 @@ best practices for modern web development in 2026.
         -webkit-filter: brightness(0) invert(1) !important;
         max-height: 32px !important;
         margin-right: 0 !important;
+    }
+
+    /* Fix para textos del hero en iOS */
+    .hero-title {
+        color: #FFFFFF;
+        -webkit-text-fill-color: #FFFFFF;
+        -webkit-text-stroke: 0;
+        text-shadow: none;
+        background: transparent;
+        position: relative;
+        z-index: 20;
+    }
+
+    .hero-title .highlight {
+        color: hsl(var(--color-secondary));
+        -webkit-text-fill-color: hsl(var(--color-secondary));
+        background: transparent;
+    }
+
+    .hero-subtitle {
+        color: hsl(var(--color-secondary));
+        -webkit-text-fill-color: hsl(var(--color-secondary));
+        background: transparent;
+        position: relative;
+        z-index: 20;
+    }
+
+    .hero-text {
+        color: #FFFFFF;
+        -webkit-text-fill-color: #FFFFFF;
+        text-shadow: none;
+        background: transparent;
+        position: relative;
+        z-index: 20;
+    }
+
+    .hero-content {
+        background: transparent;
+        position: relative;
+        z-index: 15;
+        isolation: isolate;
     }
 
     .nav-links {
