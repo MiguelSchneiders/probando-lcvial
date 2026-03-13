@@ -770,6 +770,11 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     align-items: center;
     text-decoration: none;
+    background-color: #14171C;
+    padding: 0.5rem;
+    border-radius: var(--border-radius-sm);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border: 2px solid #2a2d35;
 }
 
 .logo img {
@@ -1601,6 +1606,12 @@ best practices for modern web development in 2026.
     .logo {
         display: flex;
         align-items: center;
+        background-color: #14171C;
+        padding: 0.5rem;
+        border-radius: var(--border-radius-sm);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+        border: 2px solid #2a2d35;
+        z-index: 1001;
     }
     
     .logo img {
