@@ -761,27 +761,30 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .logo {
-    width: 6.25rem;
-    height: 5rem;
-    background-color: hsl(var(--color-dark)) !important;
+    width: 6.25rem !important;
+    height: 5rem !important;
+    background: #14171C !important;
     font-family: var(--font-family-heading);
     font-size: 1.5rem;
     font-weight: 800;
     color: hsl(var(--color-primary));
-    border-radius: var(--border-radius-sm);
-    padding: 0.25rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: var(--shadow-sm);
+    border-radius: var(--border-radius-sm) !important;
+    padding: 0.25rem !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3) !important;
+    border: 2px solid #2a2d35 !important;
 }
 
 .logo img {
-    max-width: 100%;
-    height: auto;
-    max-height: 40px;
-    filter: brightness(0) invert(1);
-    -webkit-filter: brightness(0) invert(1);
+    max-width: 90% !important;
+    height: auto !important;
+    max-height: 35px !important;
+    filter: brightness(0) invert(1) !important;
+    -webkit-filter: brightness(0) invert(1) !important;
+    margin: 0 !important;
+    vertical-align: middle !important;
 }
 
 .logo .highlight {
@@ -1586,15 +1589,20 @@ best practices for modern web development in 2026.
     }
 
     .logo {
-        background-color: hsl(var(--color-dark)) !important;
-        box-shadow: var(--shadow-md) !important;
-        z-index: 1001;
-        border: 1px solid hsl(var(--color-gray) / 0.2) !important;
+        background: #14171C !important;
+        background-color: #14171C !important;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4) !important;
+        z-index: 1001 !important;
+        border: 2px solid #2a2d35 !important;
+        width: 6.25rem !important;
+        height: 5rem !important;
     }
 
     .logo img {
         filter: brightness(0) invert(1) !important;
         -webkit-filter: brightness(0) invert(1) !important;
+        max-height: 32px !important;
+        margin-right: 0 !important;
     }
 
     .nav-links {
