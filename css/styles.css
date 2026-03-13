@@ -1624,13 +1624,6 @@ best practices for modern web development in 2026.
         height: 5rem !important;
     }
 
-    .logo img {
-        filter: brightness(0) invert(1) !important;
-        -webkit-filter: brightness(0) invert(1) !important;
-        max-height: 32px !important;
-        margin-right: 0 !important;
-    }
-
     /* Fix para textos del hero en iOS */
     .hero-title {
         color: #FFFFFF;
