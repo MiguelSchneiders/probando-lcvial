@@ -767,33 +767,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .logo {
-    width: 6.25rem !important;
-    height: 5rem !important;
-    background: #14171C !important;
-    font-family: var(--font-family-heading);
-    font-size: 1.2rem;
-    font-weight: 800;
-    color: #FFFFFF;
-    border-radius: var(--border-radius-sm) !important;
-    padding: 0.25rem !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3) !important;
-    border: 2px solid #2a2d35 !important;
-    text-align: center;
-    line-height: 1.1;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
 }
 
 .logo img {
-    display: none !important;
-}
-
-.logo::after {
-    content: "LCVIAL";
-    color: #FFFFFF;
-    font-weight: 800;
-    font-size: 1.2rem;
+    height: 40px;
+    width: auto;
+    object-fit: contain;
 }
 
 .logo .highlight {
@@ -1617,13 +1599,15 @@ best practices for modern web development in 2026.
     }
 
     .logo {
-        background: #14171C !important;
-        background-color: #14171C !important;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4) !important;
-        z-index: 1001 !important;
-        border: 2px solid #2a2d35 !important;
-        width: 6.25rem !important;
-        height: 5rem !important;
+        display: flex;
+        align-items: center;
+    }
+    
+    .logo img {
+        height: 40px;
+        width: auto;
+        max-width: 120px;
+        object-fit: contain;
     }
 
     /* Fix para textos del hero en iOS */
