@@ -337,7 +337,8 @@ h6 {
     }
 }
 
-/* Dark mode support */
+/* Dark mode support - Disabled to maintain light theme consistency */
+/* 
 @media (prefers-color-scheme: dark) {
     :root {
         --color-light: 220 15% 16%;
@@ -357,6 +358,7 @@ h6 {
             hsl(220 20% 10% / 0.6) 100%);
     }
 }
+*/
 
 /* Light level support */
 @media (prefers-color-scheme: light) and (light-level: dim) {
