@@ -773,6 +773,15 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     align-items: center;
     justify-content: center;
+    box-shadow: var(--shadow-sm);
+}
+
+.logo img {
+    max-width: 100%;
+    height: auto;
+    max-height: 40px;
+    filter: brightness(0) invert(1);
+    -webkit-filter: brightness(0) invert(1);
 }
 
 .logo .highlight {
@@ -1578,8 +1587,14 @@ best practices for modern web development in 2026.
 
     .logo {
         background-color: hsl(var(--color-dark)) !important;
-        box-shadow: var(--shadow-sm);
+        box-shadow: var(--shadow-md) !important;
         z-index: 1001;
+        border: 1px solid hsl(var(--color-gray) / 0.2) !important;
+    }
+
+    .logo img {
+        filter: brightness(0) invert(1) !important;
+        -webkit-filter: brightness(0) invert(1) !important;
     }
 
     .nav-links {
