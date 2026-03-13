@@ -765,9 +765,9 @@ h1, h2, h3, h4, h5, h6 {
     height: 5rem !important;
     background: #14171C !important;
     font-family: var(--font-family-heading);
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 800;
-    color: hsl(var(--color-primary));
+    color: #FFFFFF;
     border-radius: var(--border-radius-sm) !important;
     padding: 0.25rem !important;
     display: flex !important;
@@ -775,16 +775,19 @@ h1, h2, h3, h4, h5, h6 {
     justify-content: center !important;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3) !important;
     border: 2px solid #2a2d35 !important;
+    text-align: center;
+    line-height: 1.1;
 }
 
 .logo img {
-    max-width: 90% !important;
-    height: auto !important;
-    max-height: 35px !important;
-    filter: brightness(0) invert(1) !important;
-    -webkit-filter: brightness(0) invert(1) !important;
-    margin: 0 !important;
-    vertical-align: middle !important;
+    display: none !important;
+}
+
+.logo::after {
+    content: "LCVIAL";
+    color: #FFFFFF;
+    font-weight: 800;
+    font-size: 1.2rem;
 }
 
 .logo .highlight {
